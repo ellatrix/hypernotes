@@ -1,4 +1,4 @@
-# Docs
+# Hypernotes
 
     Contributors:      ellatrix, wordpressdotorg
     Tags:              notes, lists, bookmarks, scrapbook
@@ -13,6 +13,10 @@ Write private notes within WordPress!
 ## Description
 
 This plugins allows you to write private notes within WorPress.
+
+* Adds a new custom post type for the notes.
+* The notes cannot be published and will always remain private.
+* You can create folders to organise the notes.
 
 Together with the new PWA capabilities introduced by the [Gutenberg plugin](https://wordpress.org/plugins/gutenberg/), the notes could be accessed more easily through an app (mobile or desktop). 
 

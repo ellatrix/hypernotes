@@ -19,12 +19,27 @@ add_filter( 'the_title', function( $title, $id ) {
 	if ( get_post_type( $id ) !== 'hypernote' ) {
         return $title;
     }
+
+	$post = get_post( $id );
+	$blocks = parse_blocks( $post->post_content );
+
+	$i = 0;
+	$text = '';
+
+	while ( isset( $blocks[ $i ] ) ) {
+		$text = wp_trim_words( $blocks[ $i ]['innerHTML'], 10 );
+		$i++;
+
+		if ( $text ) {
+			break;
+		}
+	}
  
-    return get_the_excerpt( $id );
+    return $text;
 }, 10, 2 );
 
 add_filter( 'wp_insert_post_data', function( $post ) {
-	if ( $post['post_type'] == 'hypernote' ) {
+	if ( $post['post_type'] == 'hypernote' && $post[ 'post_status' ] !== 'trash' ) {
 		$post[ 'post_status' ] = 'private';
 	};
 
@@ -49,6 +64,7 @@ foreach ( array(
 }
 
 add_action( 'admin_menu', function() {
+	remove_submenu_page( 'edit.php?post_type=hypernote', 'post-new.php?post_type=hypernote' );
 	$terms = get_terms( 'hypernote-folder', array( 'hide_empty' => false ) );
 	foreach ( $terms as $term ) {
 		add_submenu_page(
@@ -58,7 +74,7 @@ add_action( 'admin_menu', function() {
 			'read',
 			'edit.php?post_type=hypernote&hypernote-folder=' . $term->slug,
 			'',
-			0
+			1
 		);
 	}
 } );
