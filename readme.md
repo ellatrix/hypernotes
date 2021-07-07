@@ -12,7 +12,7 @@ Write private notes within WordPress!
 
 ## Description
 
-This plugins allows you to write private notes within WorPress.
+This plugins allows you to write private notes within WordPress.
 
 * Adds a new custom post type for the notes.
 * The notes cannot be published and will always remain private.
