@@ -78,3 +78,17 @@ add_action( 'admin_menu', function() {
 		);
 	}
 } );
+
+add_filter( 'parent_file', function( $parent_file ) {
+    global $submenu_file;
+
+    if (
+		isset( $_GET['post_type'] ) &&
+		$_GET['post_type'] === 'hypernote' &&
+		isset( $_GET['hypernote-folder'] )
+	) {
+		$submenu_file .= '&hypernote-folder=' . $_GET['hypernote-folder'];
+	}
+
+    return $parent_file;
+}, 10, 2 );
