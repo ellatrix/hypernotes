@@ -4,7 +4,7 @@
  * Plugin Name: Hypernotes
  * Plugin URI: https://wordpress.org/plugins/hypernotes/
  * Description: Write private notes within WordPress!
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Ella van Durpe
  * Author URI: https://ellavandurpe.com
  * License: GPLv2 or later

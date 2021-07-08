@@ -5,7 +5,7 @@
     Requires PHP:      5.3
     Requires at least: 5.8
     Tested up to:      5.8
-    Stable tag:        1.0.0
+    Stable tag:        1.0.1
     License:           GPL-2.0+
 
 Write private notes within WordPress!
@@ -25,6 +25,11 @@ Together with the new PWA capabilities introduced by the [Gutenberg plugin](http
 Only you will be able to see your notes within the WordPress admin, but the notes are NOT encrypted at the moment, so anyone with database access will be able to read them.
 
 ## Changelog
+
+### 1.0.1
+
+* Highlight the active folder in the admin menu.
+* Allow notes to be trashed.
 
 ### 1.0.0
 
