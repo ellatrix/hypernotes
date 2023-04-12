@@ -3,8 +3,8 @@
     Contributors:      ellatrix, wordpressdotorg
     Tags:              notes, lists, bookmarks, scrapbook
     Requires PHP:      5.3
-    Requires at least: 5.8
-    Tested up to:      5.8
+    Requires at least: 6.2
+    Tested up to:      6.2
     Stable tag:        1.0.1
     License:           GPL-2.0+
 
